@@ -69,7 +69,7 @@ botonLogin.addEventListener("click", async (e) => {
 
         setTimeout(() => {
           if (rol === "admin") {
-            window.location.href = "admin.html";
+            window.location.href = "/admin2228";
           } else if (rol === "seller" && estadoActual === "On") {
             window.location.href = "inicio.html";
           } else if (rol === "supplier" && estadoActual === "On") {
