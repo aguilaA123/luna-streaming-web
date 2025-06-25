@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login ~ Luna Streaming</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="estado-indicador">
+    <span class="punto-estado" id="puntoEstado"></span>
+    <span id="textoEstado">Estado</span>
+  </div>
+
+  <div class="login-container">
+    <h1>Iniciar Sesión</h1>
+
+    <label class="ds-label">
+      <div class="ds-wrapper">
+        <div class="ds-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+        </div>
+        <input type="text" id="username" class="ds_textinput" placeholder="Usuario" />
+      </div>
+      <i></i>
+    </label>
+
+    <label class="ds-label">
+      <div class="ds-wrapper">
+        <div class="ds-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 17a2 2 0 1 0 .001-3.999A2 2 0 0 0 12 17zm6-5v-2c0-3.31-2.69-6-6-6S6 6.69 6 10v2H4v10h16V12h-2zm-2 0H8v-2c0-2.21 1.79-4 4-4s4 1.79 4 4v2z"/></svg>
+        </div>
+        <input type="password" id="password" class="ds_textinput" placeholder="Contraseña" />
+      </div>
+      <i></i>
+    </label>
+
+    <div id="mensaje" class="mensaje-error"></div>
+
+    <button id="loginButton">Ingresar</button>
+
+    <div class="registro-texto">
+      ¿No tienes una cuenta? <a class="registro-link" href="/registro">Regístrate</a>
+    </div>
+  </div>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
