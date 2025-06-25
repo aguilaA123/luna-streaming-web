@@ -1,0 +1,176 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #0d0d0d;
+  font-family: 'Courier New', Courier, monospace;
+  color: white;
+  overflow-x: hidden;
+}
+
+.barra-superior {
+  background-color: #121212;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 10px #00ffff;
+}
+
+.icono-menu {
+  color: #00ffff;
+  cursor: pointer;
+}
+
+.icono-svg {
+  width: 28px;
+  height: 28px;
+}
+
+.contenido {
+  text-align: center;
+  padding: 30px 10px;
+}
+
+#estadoWeb {
+  font-size: 22px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.estado-verde {
+  color: #00ff00;
+  text-shadow: 0 0 10px #00ff00;
+}
+
+.estado-rojo {
+  color: red;
+  text-shadow: 0 0 10px red;
+}
+
+.estado-cargando {
+  color: gray;
+  text-shadow: none;
+}
+
+.background-button {
+  background: repeating-linear-gradient(
+    45deg,
+    #3c2209 0 20px,
+    #ff9c00 20px 40px
+  );
+  width: 10em;
+  height: 10em;
+  box-shadow: 15px 15px 50px 5px #5f5f5f;
+  position: relative;
+  display: inline-block;
+  outline: 2px solid black;
+  margin-bottom: 20px;
+}
+
+.background-button::before {
+  content: "";
+  position: absolute;
+  top: 15%;
+  left: 15%;
+  width: 70%;
+  height: 70%;
+  background: #a0b8c4;
+  border: 2px solid #3c2209;
+}
+
+.button {
+  background: #cc2a1f;
+  width: 65%;
+  height: 65%;
+  border-radius: 50%;
+  position: absolute;
+  top: 7.5%;
+  left: 18.25%;
+  color: white;
+  font-size: 1em;
+  font-weight: 900;
+  box-shadow: 0 15px 0 0 #842a2a;
+  transition: all .5s ease;
+  border: 2px solid black;
+  cursor: pointer;
+}
+
+.button:active {
+  box-shadow: 0 1px 1px 1px #8C0606;
+  top: 15%;
+}
+
+.button.parpadeo {
+  animation: parpadeoBoton 0.5s infinite alternate;
+}
+
+@keyframes parpadeoBoton {
+  0% { box-shadow: 0 0 20px 8px red; }
+  100% { box-shadow: 0 0 30px 12px red; }
+}
+
+.emergency {
+  margin-top: 20px;
+  display: none;
+  animation: blinkText 0.5s infinite alternate;
+  color: red;
+  font-size: 18px;
+  text-shadow: 0 0 10px red;
+}
+
+@keyframes blinkText {
+  from { opacity: 1; }
+  to { opacity: 0.3; }
+}
+
+.panel-pin {
+  margin-top: 25px;
+}
+
+#pinDisplay {
+  color: #00ffff;
+  font-size: 24px;
+  letter-spacing: 10px;
+  margin-bottom: 10px;
+  text-shadow: 0 0 8px #00ffff;
+}
+
+.teclado {
+  display: grid;
+  grid-template-columns: repeat(3, 60px);
+  gap: 10px;
+  justify-content: center;
+}
+
+.teclado button {
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 22px;
+  cursor: pointer;
+  box-shadow: 0 0 10px red;
+  transition: transform 0.1s;
+}
+
+.teclado button:active {
+  transform: scale(0.95);
+  box-shadow: 0 0 15px #ff0000;
+}
+
+.oculto {
+  display: none;
+}
+
+/* 🔚 Al final del archivo */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:focus,
+button:focus-visible,
+button:focus-within,
+.digito:focus {
+  outline: none;
+  }
